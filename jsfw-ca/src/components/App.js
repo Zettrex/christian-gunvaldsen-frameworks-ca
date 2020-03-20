@@ -6,7 +6,9 @@ import {
   Route,
   NavLink
 } from "react-router-dom";
-
+import HomePage from "./Home/HomePage";
+import ContactPage from "./Contact/ContactPage";
+import GameDescPage from "./GameDesc/GameDescPage";
 
 function App() {
   return (
@@ -25,7 +27,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={HomePage}/>
           <Route path="/contact" component={ContactPage}/>
-          <Route path="/game/:id" component={GameDPage}/>
+          <Route path="/game/:id" component={GameDescPage}/>
         </Switch>
       </div>
     </Router>
