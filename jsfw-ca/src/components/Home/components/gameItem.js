@@ -11,7 +11,7 @@ export default function (props) {
                 <span>{props.item.rating}</span>
                 <span>{props.item.released}</span>
             </div>
-            <Link to={"/game" + props.id}>Read More</Link>
+            <Link to={"/game/" + props.item.id}>Read More</Link>
         </li>
     )
 }
