@@ -2,7 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 
 export default function (props) {
-    console.log(props);
     return (
         <li className="gameItem">
             <h2>{props.item.name}</h2>
