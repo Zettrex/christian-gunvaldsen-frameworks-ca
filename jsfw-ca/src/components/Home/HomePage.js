@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import GameList from "./components/gameList";
 import SearchBar from "../SearchBar";
+import "../../style/homePage.scss";
 
 export default function () {
     const [state, setState] = useState({
@@ -9,13 +10,9 @@ export default function () {
     });
     function searchTitle(event) {
         event.preventDefault();
-
         setState({
-            games: state.games,
-            filteredGames: state.games.filter(item => {
-                console.log(new RegExp(event.target.value, "gi").test(item.name), new RegExp(event.target.value, "gi"), item.name);
-                return new RegExp(event.target.value, "gi").test(item.name)
-            })
+            ...state,
+            filteredGames: state.games.filter(item => new RegExp(event.target.value, "gi").test(item.name))
         })
     }
     const apiUrl = "https://api.rawg.io/api/games";
@@ -30,7 +27,7 @@ export default function () {
     }, []);
     console.log(state.filteredGames, state.games);
     return (
-        <main>
+        <main className={"pageWrapper"}>
             <SearchBar filterF={event => searchTitle(event)}/>
             <GameList items={state.filteredGames}/>
         </main>

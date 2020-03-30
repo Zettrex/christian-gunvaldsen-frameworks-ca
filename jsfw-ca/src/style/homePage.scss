@@ -1,0 +1,22 @@
+.searchField {
+  max-width: 75%;
+}
+
+.gameItem {
+  flex-basis: 300px;
+  min-height: 300px;
+}
+
+.gameImg.BGImg{
+  height: 175px;
+  text-indent: -9999px; //to remove the alt-tag from displaying as im using background image on the img :P
+}
+
+.gameRelease {
+  float: right;
+}
+
+.gameLink {
+  width: 75%;
+  margin: 15px auto 0;
+}

@@ -1,16 +1,21 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import PropTypes from "prop-types";
 
-export default function (props) {
+export default function gameItem({item}) {
     return (
-        <li className="gameItem">
-            <h2>{props.item.name}</h2>
-            <img src={props.item.background_image} alt={"image of " + props.item.name}/>
-            <div>
-                <span>{props.item.rating}</span>
-                <span>{props.item.released}</span>
+        <li key={item.id} className="gameItem column">
+            <img key={`${item.id}-image`} className="gameImg BGImg" style={{backgroundImage: `url(${item.background_image})`}} alt={item.name}/>
+            <h2 key={`${item.id}-name`} className="gameName">{item.name}</h2>
+            <div key={`${item.id}-detailsWrapper`} className="gameDetails">
+                <span key={`${item.id}-rating`} className="gameRating">{item.rating}</span>
+                <span key={`${item.id}-release`} className="gameRelease">{item.released}</span>
             </div>
-            <Link to={"/game/" + props.item.id}>Read More</Link>
+            <Link key={`${item.id}-link`} className="gameLink btn btn-primary" to={"/game/" + item.id}>Read More</Link>
         </li>
     )
 }
+
+gameItem.propTypes = {
+    item: PropTypes.object.isRequired
+};

@@ -1,10 +1,18 @@
 import React from "react";
+import {Form, Button} from "react-bootstrap"
+import PropTypes from "prop-types";
 
-export default function (props) {
+export default function searchBar({filterF}) {
     return (
-        <form className={"searchBar"}>
-            <label htmlFor="search">Search</label>
-            <input type="text" name={"search"} onChange={props.filterF} placeholder={"search"}/>
-        </form>
+        <Form className={"searchBar row"}>
+            <Form.Control className={"searchField"} type="text" name={"search"} onChange={filterF} placeholder={"search"}/>
+            <Button className={"searchButton"} type="submit">Search</Button>
+        </Form>
     )
 }
+
+searchBar.propTypes = {
+    filterF: PropTypes.func.isRequired
+};
+
+
