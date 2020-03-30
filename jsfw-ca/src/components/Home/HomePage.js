@@ -27,7 +27,7 @@ export default function () {
     }, []);
     console.log(state.filteredGames, state.games);
     return (
-        <main className={"pageWrapper"}>
+        <main className={"pageWrapper row"}>
             <SearchBar filterF={event => searchTitle(event)}/>
             <GameList items={state.filteredGames}/>
         </main>

@@ -1,13 +1,18 @@
-.searchField {
-  max-width: 75%;
-}
 
+.searchBar {
+  display: block;
+  margin: 0 auto;
+}
 .gameItem {
   flex-basis: 300px;
   min-height: 300px;
 }
+.gameName{
+  text-align: center;
+}
 
 .gameImg.BGImg{
+  display: block;
   height: 175px;
   text-indent: -9999px; //to remove the alt-tag from displaying as im using background image on the img :P
 }
@@ -19,4 +24,17 @@
 .gameLink {
   width: 75%;
   margin: 15px auto 0;
+}
+
+.row {
+  justify-content: center;
+}
+
+[class*="col-"], .column {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+  flex-shrink: 1;
+  min-height: 1px;
 }

@@ -26,3 +26,11 @@ h1 {
   background-position: center;
   background-size: cover;
 }
+
+.contentWrapper {
+  margin-top: 20px;
+}
+
+div[class*="col-"] {
+  padding: 10px 15px;
+}
