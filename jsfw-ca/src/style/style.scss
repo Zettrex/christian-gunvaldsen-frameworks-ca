@@ -1,9 +1,6 @@
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
 @import "zero";
 @import "widgets";
+
 span {
   display: inline-block;
 }
@@ -25,4 +22,8 @@ h1 {
 .BGImg {
   background-position: center;
   background-size: cover;
+}
+
+.contentWrapper {
+  margin-top: 20px;
 }

@@ -37,6 +37,7 @@ export default function (props) {
     const { register, handleSubmit, errors } = useForm({
         validationSchema: schema
     });
+
     return (
         <main className={"pageWrapper"}>
             <h1>Contact Form</h1>
