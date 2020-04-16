@@ -1,0 +1,7 @@
+//headings sizes
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: 12px + 6px * (3.5 - $i);
+    margin: 0.5em 0 0.75em;
+  }
+}

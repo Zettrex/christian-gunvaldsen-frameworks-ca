@@ -1,0 +1,29 @@
+@import "zero";
+@import "widgets";
+
+span {
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+}
+
+.pageWrapper {
+  padding: 50px 0;
+}
+
+h1 {
+  text-align: center;
+}
+.form-label {
+  padding: 10px;
+}
+
+.BGImg {
+  background-position: center;
+  background-size: cover;
+}
+
+.contentWrapper {
+  margin-top: 20px;
+}
